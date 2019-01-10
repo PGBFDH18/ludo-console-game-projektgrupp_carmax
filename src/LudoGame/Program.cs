@@ -5,15 +5,15 @@ namespace LudoGame
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-
+        {           
             int nrOfPlayer;
 
             Console.WriteLine("How many player?");
             int countOfPlayer = int.Parse(Console.ReadLine());
-
+            
             string player;
+            int i = 0;
+            int a = 9;
 
             if (nrOfPlayer <= 4)
             {
