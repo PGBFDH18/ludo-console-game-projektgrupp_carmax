@@ -5,33 +5,11 @@ namespace LudoGame
     class Program
     {
         static void Main(string[] args)
-        {           
-            int nrOfPlayer;
-
-            Console.WriteLine("How many player?");
-            int countOfPlayer = int.Parse(Console.ReadLine());
-            
-            string player;
-            int i = 0;
-            int a = 9;
-
-            if (nrOfPlayer <= 4)
-            {
-                Console.WriteLine("Game start");
-            }
-            else
-            {
-                Console.WriteLine("To many player...");
-                // vill att man ska kunna fortsätta att skriva in hur många spelare man är om man blir för många....
-                //Console.WriteLine("How many player?");
-                //nrOfPlayer = int.Parse(Console.ReadLine());
-            }
-
-            Random randomNr = new Random();
-            int rand_dice = randomNr.Next(1, 7);
+        {
+            Class1.GameStart();
 
 
-            Console.ReadKey();
         }
+            Console.ReadKey();
     }
 }
