@@ -7,9 +7,8 @@ namespace LudoGame
         static void Main(string[] args)
         {
             Class1.GameStart();
-
-
+            class1.RollDice();
         }
-            Console.ReadKey();
+          
     }
 }
