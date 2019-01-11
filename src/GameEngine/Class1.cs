@@ -12,13 +12,14 @@ namespace GameEngine
         public int gamePiece3;
         public int gamePiece4;
 
-        public static Player()
+        public void Player()
         {
             //antal steg från mål på varje pjäs
             gamePiece1 = 40;
             gamePiece2 = 40;
             gamePiece3 = 40;
             gamePiece4 = 40;
+            
         }
 
         public void GameStart()
@@ -39,12 +40,12 @@ namespace GameEngine
             }
         }
 
-        public static RollDice()
+        public void RollDice()
         {
             Random randomNr = new Random();
             int rand_dice = randomNr.Next(1, 7);
 
-            if (randomNr == 6)
+            if (rand_dice == 6)
             {
                 //if(man har två > boet)
                 Console.WriteLine("What do you want to do?");
@@ -66,22 +67,22 @@ namespace GameEngine
 
                 if (whichPiece == 1)
                 {
-                    gamePiece1 - rand_dice;
+                    int test = gamePiece1 - rand_dice;
                 }
 
                 if (whichPiece == 2)
                 {
-                    gamePiece2 - rand_dice;
+                    int test = gamePiece2 - rand_dice;
                 }
 
                 if (whichPiece == 3)
                 {
-                    gamePiece3 - rand_dice;
+                    int test = gamePiece3 - rand_dice;
                 }
 
                 if (whichPiece == 4)
                 {
-                    gamePiece4 - rand_dice;
+                    int test = gamePiece4 - rand_dice;
                 }
 
                 // måste kolla hur många man har i boet
