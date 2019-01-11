@@ -10,6 +10,5 @@ namespace LudoGame
             class1.GameStart();
             class1.RollDice();
         }
-
     }
 }
