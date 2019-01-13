@@ -4,108 +4,51 @@ namespace GameEngine
 {
     public class Class1
     {        
-        public int countOfPlayer;
-        public string player;
 
-        public int gamePiece1;
-        public int gamePiece2;
-        public int gamePiece3;
-        public int gamePiece4;
 
-        public void Player()
-        {
-            //antal steg från mål på varje pjäs
-            gamePiece1 = 40;
-            gamePiece2 = 40;
-            gamePiece3 = 40;
-            gamePiece4 = 40;
-        }
-
-        public void GameStart()
+        public int GameStart()
         {
             Console.WriteLine("How many players?");
             int countOfPlayer = int.Parse(Console.ReadLine());
 
-            if (countOfPlayer == 4)
+            //if players are more than 4 or less than , let the user entar a new value..
+            while (countOfPlayer > 4 || countOfPlayer < 1)
             {
-                Console.WriteLine("Game start");
-                   int rollTheDice = int.Parse(Console.ReadLine());
-                Console.WriteLine("Press 1 to roll the dice");
-                if (rollTheDice == 1)
+                //if players are more than 4, tell user that there are to many players
+                if (countOfPlayer > 4)
                 {
-                    RollDice();
+                    Console.WriteLine("To many players... \n please enter a value under 5");
+                    countOfPlayer = int.Parse(Console.ReadLine());
+
+                } //if the players are less then 1, tell the users that there are to few playeZ¨|LOL
+                else if ( countOfPlayer < 1) 
+                {
+                    Console.WriteLine("To few players... \n please enter a value over 0");
+                    countOfPlayer = int.Parse(Console.ReadLine());
                 }
-            } // Om man knappar in fler än 4 spelaren så ska programmet säga att det är för många.
-            else if (countOfPlayer > 5) 
-            {
-                Console.WriteLine("To many player...");
-                // vill att man ska kunna fortsätta att skriva in hur många spelare man är om man blir för många....
-                Console.WriteLine("How many player?");
-                 int nrOfPlayer = int.Parse(Console.ReadLine());
             }
-            // Så man inte kan skriva in 0 players.
+
+            //when the players are between 0 and 4 the loop exits and code goes on
+            Console.WriteLine("Get Ready! \nPress 1 to start the game! ");
+
+            if (int.Parse(Console.ReadLine()) == 1)
+            {
+                  Console.WriteLine("Game start");
+
+                //we return countOfPlayer because the user entered 1, indicating that the user wants to play and call the next function in program.cs (RollDice)
+                return countOfPlayer;
+            }
             else
             {
-                Console.WriteLine("Cant be zero players. Please type in the right amount of players to start.");
+                //we return 0 if the user did not want to roll the dice or said something othere than "1"
+                return 0;
             }
+
         }
-        public void test()
-        {
-            Console.WriteLine("Which gamepiece do you wanna move?");
-            Console.WriteLine("1. gamePiece1");
-            Console.WriteLine("2. gamePiece2");
-            Console.WriteLine("3. gamePiece3");
-            Console.WriteLine("4. gamePiece4");
-
-            //int whichPiece = int.Parse(Console.ReadLine());
-
-            //if (whichPiece == 1)
-            //{
-            //    int test = gamePiece1 - rand_dice;
-            //}
-
-            //if (whichPiece == 2)
-            //{
-            //    int test = gamePiece2 - rand_dice;
-            //}
-
-            //if (whichPiece == 3)
-            //{
-            //    int test = gamePiece3 - rand_dice;
-            //}
-
-            //if (whichPiece == 4)
-            //{
-            //    int test = gamePiece4 - rand_dice;
-            //}
-
-            // måste kolla hur många man har i boet
-            //if (gamePiece1 || GamePiece2 || GamePiece3 || Gamepiece4 > 40)
-            //{
-            //}
-        }
-
         public void RollDice()
         {
-            Random randomNr = new Random();
-            int rand_dice = randomNr.Next(1, 7);
-            Console.WriteLine("Your number is: " + rand_dice);
 
-            if (rand_dice == 6)
-            {
-                //if(man har två > boet)
-                Console.WriteLine("What do you want to do?");
-
-                Console.WriteLine();
-                Console.WriteLine("1. Enter with two Game Pieces? ");
-                Console.WriteLine("2. Go six steps forward? ");
-                Console.WriteLine("3. choose another game piece to move?");
-
-                //int option = int.Parse(Console.ReadLine());
-
-                
-            }
-            Console.ReadKey();
+           
         }
     }
 }
