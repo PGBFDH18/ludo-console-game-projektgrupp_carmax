@@ -26,22 +26,27 @@ namespace GameEngine
             Console.WriteLine("How many players?");
             int countOfPlayer = int.Parse(Console.ReadLine());
 
-            if (countOfPlayer <= 4)
+            if (countOfPlayer == 4)
             {
                 Console.WriteLine("Game start");
+                   int rollTheDice = int.Parse(Console.ReadLine());
                 Console.WriteLine("Press 1 to roll the dice");
-                int rollTheDice = int.Parse(Console.ReadLine());
                 if (rollTheDice == 1)
                 {
                     RollDice();
                 }
-            }
-            else
+            } // Om man knappar in fler än 4 spelaren så ska programmet säga att det är för många.
+            else if (countOfPlayer > 5) 
             {
                 Console.WriteLine("To many player...");
                 // vill att man ska kunna fortsätta att skriva in hur många spelare man är om man blir för många....
-                //Console.WriteLine("How many player?");
-                //nrOfPlayer = int.Parse(Console.ReadLine());
+                Console.WriteLine("How many player?");
+                 int nrOfPlayer = int.Parse(Console.ReadLine());
+            }
+            // Så man inte kan skriva in 0 players.
+            else
+            {
+                Console.WriteLine("Cant be zero players. Please type in the right amount of players to start.");
             }
         }
         public void test()
