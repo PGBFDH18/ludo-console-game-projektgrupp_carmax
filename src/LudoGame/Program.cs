@@ -56,7 +56,6 @@ namespace LudoGame
                 }
                     Console.ReadKey();
             }
-
             else
             {
                    Console.WriteLine("You pressed something else besides 1, you suck major dicks");

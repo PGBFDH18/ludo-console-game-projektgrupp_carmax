@@ -57,16 +57,16 @@ namespace GameEngine
                 Console.WriteLine("You rolled a " + rand_dice);
                 var remainingSteps = player.gamePieces[0].RemoveStepsToGoal(rand_dice);
                 //do Something... subtract rolled value from gamepiece
-                Console.WriteLine(player.PlayerName + " has moved his/her gamepiece " + rand_dice +  " steps." + " Reamaining steps is: " + remainingSteps + Environment.NewLine);
+                Console.WriteLine(player.PlayerName + " has moved his/her gamepiece " + rand_dice + " steps." + " Reamaining steps is: " + remainingSteps);
             }
 
-        }   
+        }
     }
     public class GamePiece
     {
         int StepsToGoal = 40;
 
-        public string RemoveStepsToGoal (int steps)
+        public string RemoveStepsToGoal(int steps)
         {
             var remainingSteps = StepsToGoal - steps;
             return remainingSteps.ToString();
