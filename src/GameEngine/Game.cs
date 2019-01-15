@@ -2,7 +2,7 @@
 
 namespace GameEngine
 {
-    public class Class1
+    public class Game
     {        
         public int GameStart()
         {

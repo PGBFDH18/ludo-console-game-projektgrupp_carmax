@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using GameEngine;
+
 namespace LudoGame
 {
     class Program
     {
         static void Main(string[] args)
         {       
-            var class1 = new Class1();       
+            var game = new Game();       
         
             List<Player> playerList = new List<Player>();
             // om variablen nedan aktiveras genom att spelaren i tidigare skede skriver in 1 så kommer nedan kod att köras. class.1gamestart låter spelet starta
 
-            var numberOfPlayers = class1.GameStart();
+            var numberOfPlayers = game.GameStart();
 
             if (numberOfPlayers > 0)
             {
