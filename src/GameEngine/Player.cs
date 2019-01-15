@@ -6,7 +6,6 @@ namespace GameEngine
 {
     public class Player
     {
-
         //egenskaper för varje spelare
 
         //Namn på spelare

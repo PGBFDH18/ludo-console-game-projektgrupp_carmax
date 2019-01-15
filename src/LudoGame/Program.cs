@@ -6,10 +6,12 @@ namespace LudoGame
     class Program
     {
         static void Main(string[] args)
-        {
-            var class1 = new Class1();
+        {       
+            var class1 = new Class1();       
+        
             List<Player> playerList = new List<Player>();
-            // om variablen nedan aktiveras genom att spelaren i tidigare skede skriver in 1 så kommer nedan kod att köras. class.1gamestart låter spelet starta    
+            // om variablen nedan aktiveras genom att spelaren i tidigare skede skriver in 1 så kommer nedan kod att köras. class.1gamestart låter spelet starta
+
             var numberOfPlayers = class1.GameStart();
 
             if (numberOfPlayers > 0)
@@ -39,9 +41,9 @@ namespace LudoGame
                     playerList.Add(player);
                 }
                 Console.WriteLine("The players are: \n");
+
                 foreach (var p in playerList)
                 {
-
                     Console.WriteLine(">>  " + p.PlayerName);
                 }
 
@@ -58,8 +60,7 @@ namespace LudoGame
             else
             {
                    Console.WriteLine("You pressed something else besides 1, you suck major dicks");
-             };
-
+            };
         }
     }
 }

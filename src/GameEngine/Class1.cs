@@ -4,8 +4,6 @@ namespace GameEngine
 {
     public class Class1
     {        
-
-
         public int GameStart()
         {
             Console.WriteLine("How many players?");
@@ -45,10 +43,6 @@ namespace GameEngine
             }
 
         }
-        public void RollDice()
-        {
-
-           
-        }
+       
     }
 }
