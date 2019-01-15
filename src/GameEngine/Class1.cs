@@ -41,6 +41,12 @@ namespace GameEngine
                 //we return 0 if the user did not want to roll the dice or said something othere than "1"
                 return 0;
             }
+
+        }
+        public void RollDice()
+        {
+
+           
         }
     }
 }
