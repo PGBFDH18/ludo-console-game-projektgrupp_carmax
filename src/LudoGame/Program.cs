@@ -44,7 +44,6 @@ namespace LudoGame
 
                     Console.WriteLine(">>  " + p.PlayerName);
                 }
-
                 //skapa metod för att köra en runda..
                 //starta första "tärningskastet"
                 foreach (var p in playerList)

@@ -6,9 +6,7 @@ namespace GameEngine
 {
     public class Player
     {
-
         //egenskaper för varje spelare
-
         //Namn på spelare
         public string PlayerName { get; set; }
 
@@ -60,7 +58,6 @@ namespace GameEngine
                 //do Something... subtract rolled value from gamepiece
                 Console.WriteLine(player.PlayerName + " has moved his/her gamepiece " + rand_dice +  " steps." + " Reamaining steps is: " + remainingSteps + Environment.NewLine);
             }
-
         }   
     }
     public class GamePiece
