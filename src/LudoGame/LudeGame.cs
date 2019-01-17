@@ -4,7 +4,7 @@ using GameEngine;
 
 namespace LudoGame
 {
-    class Program
+    class LudoGame
     {
         static void Main(string[] args)
         {       
