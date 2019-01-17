@@ -45,10 +45,5 @@ namespace GameEngine
             }
 
         }
-        public void RollDice()
-        {
-
-           
-        }
     }
 }
