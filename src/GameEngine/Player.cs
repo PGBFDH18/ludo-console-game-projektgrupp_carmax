@@ -6,9 +6,7 @@ namespace GameEngine
 {
     public class Player
     {
-
         //egenskaper för varje spelare
-
         //Namn på spelare
         public string PlayerName { get; set; }
 
@@ -61,16 +59,6 @@ namespace GameEngine
                 Console.WriteLine(player.PlayerName + " has moved his/her gamepiece " + rand_dice + " steps." + " Reamaining steps is: " + remainingSteps);
             }
 
-        }
-    }
-    public class GamePiece
-    {
-        int StepsToGoal = 40;
-
-        public string RemoveStepsToGoal(int steps)
-        {
-            var remainingSteps = StepsToGoal - steps;
-            return remainingSteps.ToString();
-        }
+        }   
     }
 }
